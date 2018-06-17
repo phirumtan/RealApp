@@ -10,8 +10,8 @@
 
     <com.phirum.realapplication.InkPageIndicator
         android:id="@+id/indicator"
-        app:currentPageIndicatorColor="@android:color/holo_red_light"
-        app:pageIndicatorColor="@android:color/black"
+        app:currentPageIndicatorColor="#ffff4444"
+        app:pageIndicatorColor="#ff000000"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
