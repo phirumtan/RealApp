@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.phirum.realapplication.MainActivity;
 import com.phirum.realapplication.R;
+import com.phirum.realapplication.pojo.RegisterItem;
 import com.phirum.realapplication.webservice.APIClient;
 import com.phirum.realapplication.webservice.APIUserInterface;
 
@@ -84,7 +85,11 @@ public class LoginFragment extends Fragment {
     private void methodDologin(final View v) {
         String username = mEdtUsername.getText().toString();
         String password = mEdtPassword.getText().toString();
-        Call<Object> call = mApiUserInterface.doLogin(username, password);
+        //Call<Object> call = mApiUserInterface.doLogin(username, password);
+        RegisterItem registerItem = new RegisterItem();
+        registerItem.email = "ph";
+        registerItem.password = "23";
+        Call<Object> call = mApiUserInterface.doLogin(registerItem);
         call.enqueue(new Callback<Object>() {
             @Override
             public void onResponse(Call<Object> call, Response<Object> response) {

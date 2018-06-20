@@ -11,13 +11,13 @@ import android.widget.ImageView;
 
 import com.phirum.realapplication.R;
 
-public class MyPagerAdapter extends PagerAdapter{
+public class MyPagerAdapter extends PagerAdapter {
 
     private Context mContext;
     private LayoutInflater mInflater;
 
     private int[] resValues = new int[]{
-        R.mipmap.ic_launcher, android.R.mipmap.sym_def_app_icon, R.mipmap.ic_splashscreen
+            R.mipmap.ic_launcher, android.R.mipmap.sym_def_app_icon, R.mipmap.ic_splashscreen
     };
 
     public MyPagerAdapter(Context context) {
@@ -39,7 +39,7 @@ public class MyPagerAdapter extends PagerAdapter{
 
     @NonNull
     @Override
-    public Object instantiateItem(@NonNull ViewGroup container, int position) {
+    public Object instantiateItem(@NonNull ViewGroup container, final int position) {
         ImageView itemView = (ImageView) mInflater.inflate(R.layout.layout_pager_item, container, false);
         itemView.setImageDrawable(mContext.getDrawable(resValues[position]));
         container.addView(itemView);
@@ -59,6 +59,6 @@ public class MyPagerAdapter extends PagerAdapter{
     @Nullable
     @Override
     public CharSequence getPageTitle(int position) {
-        return "Title " +position;
+        return "Title " + position;
     }
 }
