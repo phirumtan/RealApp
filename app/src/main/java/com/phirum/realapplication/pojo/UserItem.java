@@ -4,7 +4,7 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
-import java.util.List;
+import java.util.LinkedList;
 
 public class UserItem implements Serializable {
 
@@ -22,7 +22,7 @@ public class UserItem implements Serializable {
     public int totalPages;
     @SerializedName("data")
     @Expose
-    public List<Datum> data = null;
+    public LinkedList<Datum> data = null;
     private final static long serialVersionUID = -9171962494747942208L;
 
     public UserItem withPage(int page) {
@@ -45,7 +45,7 @@ public class UserItem implements Serializable {
         return this;
     }
 
-    public UserItem withData(List<Datum> data) {
+    public UserItem withData(LinkedList<Datum> data) {
         this.data = data;
         return this;
     }
