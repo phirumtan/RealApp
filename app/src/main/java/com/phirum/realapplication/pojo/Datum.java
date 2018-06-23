@@ -19,6 +19,11 @@ public class Datum implements Serializable {
     @SerializedName("avatar")
     @Expose
     public String avatar;
+
+    @SerializedName("password")
+    @Expose
+    public String password;
+
     private final static long serialVersionUID = 8516407839004241957L;
 
     public Datum withId(int id) {
@@ -40,5 +45,11 @@ public class Datum implements Serializable {
         this.avatar = avatar;
         return this;
     }
+
+    public Datum withPassword(String password) {
+        this.password = password;
+        return this;
+    }
+
 
 }

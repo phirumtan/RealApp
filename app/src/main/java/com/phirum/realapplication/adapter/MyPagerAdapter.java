@@ -1,6 +1,7 @@
 package com.phirum.realapplication.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.view.PagerAdapter;
@@ -10,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.phirum.realapplication.R;
+import com.phirum.realapplication.SqliteActivity;
 
 public class MyPagerAdapter extends PagerAdapter {
 
@@ -42,6 +44,15 @@ public class MyPagerAdapter extends PagerAdapter {
     public Object instantiateItem(@NonNull ViewGroup container, final int position) {
         ImageView itemView = (ImageView) mInflater.inflate(R.layout.layout_pager_item, container, false);
         itemView.setImageDrawable(mContext.getDrawable(resValues[position]));
+
+        itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext, SqliteActivity.class);
+                mContext.startActivity(intent);
+            }
+        });
+
         container.addView(itemView);
         return itemView;
     }
