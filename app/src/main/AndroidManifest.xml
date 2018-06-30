@@ -23,7 +23,7 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".SharedPreferenceActivity" />
-        <activity android:name=".SqliteActivity"></activity>
+        <activity android:name=".SqliteActivity" />
     </application>
 
 </manifest>

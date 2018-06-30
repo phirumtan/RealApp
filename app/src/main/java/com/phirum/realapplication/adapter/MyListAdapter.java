@@ -74,8 +74,8 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.MyViewHold
             mBtnDelete = itemView.findViewById(R.id.btn_delete);
             mBtnEdit = itemView.findViewById(R.id.btn_edit);
 
-            /*mBtnEdit.setOnClickListener(this);
-            mBtnDelete.setOnClickListener(this);*/
+            mBtnEdit.setOnClickListener(this);
+            mBtnDelete.setOnClickListener(this);
         }
 
         @Override
@@ -101,6 +101,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.MyViewHold
                     holder.setAdapter(adapter);
                     holder.setDialog(dialog);
                     holder.setPos(pos);
+
                     dialog.setCancelable(false);
                     dialog.show();
                     break;

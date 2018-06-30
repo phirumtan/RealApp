@@ -1,8 +1,10 @@
 package com.phirum.realapplication.db;
 
 import android.content.Context;
+import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.support.annotation.Nullable;
 
 public class MySqliteHelper extends SQLiteOpenHelper {
     private static final String TAG = MySqliteHelper.class.getSimpleName();
